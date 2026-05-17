@@ -13,6 +13,7 @@ import { galleryImages } from '@/lib/events-data'
 import {
   ADDRESS_INLINE,
   EMAIL,
+  GOOGLE_REVIEWS_URL,
   LOCATION_ACCESS_COPY,
   LOCATION_AREA,
   LOCATION_DISTANCE_COPY,
@@ -70,9 +71,21 @@ export default function Home() {
               Come for the grill, stay for an easy evening out.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {['4.4 Rating', '500+ Happy Guests/Week', 'Est. 2022'].map((stat) => (
-                <div key={stat} className="premium-border-glow rounded-lg border-l-2 border-gold bg-white/70 px-4 py-4 shadow-sm">
-                  <p className="font-serif text-2xl font-bold text-green-deep">{stat}</p>
+              {[
+                { label: GOOGLE_REVIEWS_URL ? '4.4 rating on Google' : '4.4 rating', href: GOOGLE_REVIEWS_URL },
+                { label: '500+ Happy Guests/Week' },
+                { label: 'Est. 2022' },
+              ].map((stat) => (
+                <div key={stat.label} className="premium-border-glow rounded-lg border-l-2 border-gold bg-white/70 px-4 py-4 shadow-sm">
+                  <p className="font-serif text-2xl font-bold text-green-deep">
+                    {stat.href ? (
+                      <a href={stat.href} target="_blank" rel="noopener noreferrer" className="hover:text-green-primary">
+                        {stat.label}
+                      </a>
+                    ) : (
+                      stat.label
+                    )}
+                  </p>
                 </div>
               ))}
             </div>

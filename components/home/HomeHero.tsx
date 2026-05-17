@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ArrowDown } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { LOCATION_AREA, LOCATION_REGION } from '@/lib/constants'
+import { GOOGLE_REVIEWS_URL, LOCATION_AREA, LOCATION_REGION } from '@/lib/constants'
 import { imageSrc, restaurantImages } from '@/lib/images'
 
 const words = ['Where', 'Good', 'Food', 'Meets', 'Great', 'Vibes']
@@ -94,7 +94,14 @@ export function HomeHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: reduceMotion ? 0 : 0.4, duration: reduceMotion ? 0 : 0.38 }}
           >
-            4.4 rating {'\u00b7'} Loved in {LOCATION_AREA} {'\u00b7'} Live Jazz Fridays from 7 PM
+            {GOOGLE_REVIEWS_URL ? (
+              <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="underline decoration-gold/60 underline-offset-4 hover:text-gold">
+                4.4 rating on Google
+              </a>
+            ) : (
+              '4.4 rating'
+            )}{' '}
+            {'\u00b7'} Loved in {LOCATION_AREA} {'\u00b7'} Live Jazz Fridays from 7 PM
           </motion.p>
         </div>
       </div>

@@ -18,6 +18,8 @@ export const INSTAGRAM_URL = 'https://www.instagram.com/greenleafkitchenbar'
 export const INSTAGRAM_HANDLE = '@greenleafkitchenbar'
 export const FACEBOOK_URL = 'https://web.facebook.com/p/GreenLeaf-Kitchen-Bar-100087524223980'
 export const FACEBOOK_LABEL = 'GreenLeaf Kitchen & Bar'
+export const GOOGLE_BUSINESS_URL = ''
+export const GOOGLE_REVIEWS_URL = ''
 export const TIKTOK_URL = ''
 
 export const OPENING_HOURS_DISPLAY = 'Monday\u2013Sunday, 9:00 AM till late'

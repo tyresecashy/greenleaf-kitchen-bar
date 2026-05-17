@@ -6,7 +6,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
-import { LOCATION_LOCALITY, OPENING_HOURS_DISPLAY, whatsappUrl } from '@/lib/constants'
+import { GOOGLE_REVIEWS_URL, LOCATION_LOCALITY, OPENING_HOURS_DISPLAY, whatsappUrl } from '@/lib/constants'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Enter your name'),
@@ -50,7 +50,14 @@ export function ContactForm() {
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-4 rounded-2xl bg-white p-5 shadow-sm" noValidate>
       <p className="text-sm font-semibold text-green-primary">
-        4.4 rating {'\u00b7'} Loved in {LOCATION_LOCALITY} {'\u00b7'} Open daily: {OPENING_HOURS_DISPLAY}
+        {GOOGLE_REVIEWS_URL ? (
+          <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="underline decoration-gold/60 underline-offset-4 hover:text-gold">
+            4.4 rating on Google
+          </a>
+        ) : (
+          '4.4 rating'
+        )}{' '}
+        {'\u00b7'} Loved in {LOCATION_LOCALITY} {'\u00b7'} Open daily: {OPENING_HOURS_DISPLAY}
       </p>
       <div className="hidden" aria-hidden="true">
         <label htmlFor="contact-website">Website</label>
