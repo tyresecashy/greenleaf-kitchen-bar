@@ -1,5 +1,5 @@
 export const BUSINESS_NAME = 'GreenLeaf Kitchen & Bar'
-export const SITE_URL = 'https://greenleafbar.co.ke'
+export const SITE_URL = 'https://greenleaf-kitchen-bar.vercel.app'
 export const LOCATION_AREA = 'Kamakis Bypass, Eastern Bypass, Ruiru'
 export const LOCATION_LOCALITY = 'Ruiru'
 export const LOCATION_ADMIN_AREA = 'Kiambu County'
