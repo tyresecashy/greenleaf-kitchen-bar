@@ -47,7 +47,10 @@ export const metadata: Metadata = {
     locale: 'en_KE',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' },
+  twitter: {
+    card: 'summary_large_image',
+    images: [imageSrc('ogImage')],
+  },
 }
 
 export const viewport = {

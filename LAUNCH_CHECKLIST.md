@@ -41,7 +41,6 @@
 
 - Confirm `sitemap.xml` is available after deployment.
 - Confirm `robots.txt` is available after deployment.
-- TODO: Create 1200x630 `public/images/upscaled/og-greenleaf.webp` for WhatsApp/Facebook previews.
 - Submit the sitemap to Google Search Console later.
 - Add Google Search Console verification later without hardcoding private credentials.
 

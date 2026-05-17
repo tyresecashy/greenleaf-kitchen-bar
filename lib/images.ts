@@ -204,12 +204,12 @@ export const restaurantImages: Record<RestaurantImageKey, RestaurantImage> = {
     fit: 'contain',
   },
   ogImage: {
-    src: `${upscaled}/greenleaf-singleton-cocktail-meal.webp`,
+    src: `${upscaled}/og-greenleaf.webp`,
     alt: 'GreenLeaf Kitchen and Bar social preview',
     usedOn: ['Open Graph metadata'],
     weak: false,
-    recommendedReplacement: 'Use a dedicated 1200x630 social card when available',
-    objectPosition: 'center 45%',
+    recommendedReplacement: 'Current dedicated social preview is preferred for WhatsApp and Facebook previews',
+    objectPosition: 'center',
     fit: 'cover',
   },
 }
